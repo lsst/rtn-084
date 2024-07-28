@@ -23,7 +23,7 @@
 % \setDocSubtitle{A subtitle}
 
 \author{%
-William O'Mullane
+Abhijit Saha
 }
 
 \setDocRef{RTN-084}
@@ -50,14 +50,17 @@ Thoughts, processes and constraints around the RAC
 \begin{document}
 
 % Create the title page.
-\maketitle
-% Frequently for a technote we do not want a title page  uncomment this to remove the title page and changelog.
-% use \mkshorttitle to remove the extra pages
 
+%\maketitle
+% Frequently for a technote we do not want a title page  uncomment this to remove the title page and changelog.
+\mkshorttitle
+
+\input{body.tex}
 % ADD CONTENT HERE
 % You can also use the \input command to include several content files.
 
 \appendix
+\input{notes}
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
 \section{References} \label{sec:bib}
