@@ -1,4 +1,136 @@
 \section{Introduction}
-\section{RAC memeers}\label{sec:members}
-\section{Sugested guidelines}\label{sec:guidelines}
-HOw often to meet etc ..
+
+This is a \textbf{draft} document to describe the future Resource Allocation Committee (RAC).
+
+The RAC will be a standing committee that considers proposals for computational resources beyond the default allocation from users of the Rubin Science Platform (RSP) deployed at the US Data Access Center (DAC) in the Cloud (data.lsst.cloud).
+
+The potential quantities of the resources that the RAC will allocate, and the process by which the RAC will operate, are being developmed in this draft document.
+
+\textbf{The contents of this draft document will change.}
+
+
+\subsection{Terms}
+
+\textbf{Data rights holder:} an individual with Rubin data rights as defined by \citeds{RDO-013}.
+
+\textbf{User}: anyone with an RSP account at data.lsst.cloud.
+Data rights are required in order to hold an RSP account.
+
+\textbf{Science community member:} anyone using the Rubin data for scientific analysis.
+This includes individuals without data rights, who cannot hold an account at data.lsst.cloud, but who might be analysing public or post-proprietary Rubin data.
+
+
+\section{Resources}\label{sec:resources}
+
+It is a requirement defined by the Science Requirements Document that the "Data Management System will also provide at least 10\% of its total capability for user-dedicated processing and user-dedicated storage" (\citeds{LPM-17}).
+This does not mean that the RAC's job is simply allocating this 10\% among users.
+For example, user resources for data access and analysis that are provided via the Cloud are essentially shared among the simultaneous active users, whereas the batch processing system is reserved for users with data processing projects that were approved by the RAC.
+
+The following describes some potential resources that the RAC might be responsible for allocating.
+
+
+\subsection{Notebook servers}\label{ssec:resources-NBs}
+
+Currently, the Notebook Aspect allows users to self-select a small, medium, or large server.
+
+\begin{itemize}
+\item Small (1.0 CPU, 4 GB RAM)
+\item Medium (2.0 CPU, 8 GB RAM)
+\item Large (4.0 CPU, 16 GB RAM)
+\end{itemize}
+
+If, in the future, larger server options exist, the RAC might be responsible for approving user proposals to access them.
+
+
+\subsection{Batch processing}\label{ssec:resources-batch}
+
+This refers to parallel processing (asynchronous) job submission.
+The user batch facility is focused on supporting a large variety of smaller needs for the science community (\citeds{DMTN-202}).
+For example, image reprocessing with specialized algorithms for specific scientific analyses.
+
+User batch processing will be available by Data Release 1 (DR1).
+Access to user batch processing will be allocated by the RAC.
+
+
+\subsection{In-kind contributions}\label{ssec:resources-inkind}
+
+One of the goals of the Rubin In-Kind Program\footnote{\url{https://www.lsst.org/scientists/in-kind-program}} is to augment the available resources for data- and compute-intensive use cases for the science community.
+
+Towards this end, some in-kind contributions are Independent Data Access Centers (IDACs) which will offer their own separate computational resources\footnote{\url{https://www.lsst.org/scientists/in-kind-program/computing-resources}}.
+
+In some cases, these IDACs might request that their resources be allocated to members of the Rubin science community by the RAC.
+
+
+\subsection{Bulk downloads}\label{ssec:resources-downloads}
+
+Users of the RSP can already download data subsets (image and table data), but limit estimates remain largely to-be-determined (TBD) and might depend sensitively on user load.
+The Data Previews will be used to quantify and optimize user experience with respect to data transfers.
+
+If, in the future, bandwidth for very large (bulk) downloads of Rubin data by individual users is available, then it would be a resource allocated by the RAC.
+Note that data transfers to IDACs (as opposed to individual users) would be considered separately by Rubin Observatory.
+
+
+\section{Membership}\label{sec:members}
+
+\textbf{At first}, while the available resources are small and demand is undersubscribed, the RAC could predominantly consist of Rubin staff with the technical expertise, with some community participation (both for oversight, as well as community liaison) to approve feasible requests.
+
+\textbf{In the future}, as demand and/or supply increases, the RAC should also expand to include a combination of Rubin staff and science community members with relevant technical and scientific expertise to evaluate and rank proposals.
+Any IDACs which request that the RAC allocate their resources should be invited to appoint a RAC member.
+
+
+\section{Proposals}\label{sec:proposals}
+
+Over time, the types and volume of resources to be allocated will grow and evolve.
+The "Call for Proposals" will capture the changes, and the proposal materials to be submitted will be redesigned to capture the growing complexity.
+
+\textbf{At first}, while the available resources are small and demand is undersubscribed, proposals might simply be a single paragraph to motivate and justify the request.
+At this stage, the submission mechanism can be correspondingly simple.
+
+\textbf{In the future}, as demand and/or supply increases, proposals for larger or more competitive resources will require correspondingly longer scientific justification and technical feasibility.
+A management system for proposals and reviews (similar to, e.g., NOIRLab's Time Allocation System\footnote{\url{https://time-allocation.noirlab.edu}}) would be needed. 
+
+
+\subsection{Timescales}\label{ssec:proposals-timescales}
+
+\textbf{At first}, while the available resources are small, and if the demand is undersubscribed, the RAC could simply start off reviewing proposals as they come in (i.e., fast-turnaround, or on a rolling basis).
+
+\textbf{In the future}, as demand and/or supply increases, the proposal timescales for larger or more competitive resources would move to a quarterly (or semesterly) basis to provide time for review.
+
+Calls for proposals and their deadlines would be broadly advertised to the science community.
+
+
+\subsection{Critera}\label{ssec:proposals-criteria}
+
+Rubin data rights are required to access and analyze proprietary Rubin data, and to hold an RSP account at data.lsst.cloud, as described in \citeds{RDO-013}.
+Thus, Rubin data rights are also be required to submit a proposal to the RAC\footnote{A future exception might be made if, for example, an IDAC provides access to public or post-proprietary Rubin data \emph{and} offers their computational resources to science community members regardless of Rubin data rights \emph{and} they request that the RAC allocate these resources.}.
+
+\textbf{At first}, while the available resources are small and demand is undersubscribed, the RAC might apply a very simple criteria of basic feasibility or even engage individual users via email to make sure their request is understood.
+
+\textbf{In the future}, as demand and/or supply increases, criteria for larger or more competitive resources would be established by the RAC that includes weighted grading based on scientific impact and technical needs.
+
+Requests from students for completion of degree-related projects should be weighted higher.
+
+
+\subsection{Dual-anonymous review}\label{ssec:proposals-anonymized}
+
+\textbf{At first}, this might not be necessary -- and it might take time to implement.
+
+\textbf{In the future}, best practices for unbiased reviews should be adopted.
+
+
+\section{Allocations}\label{sec:allocations}
+
+It is likely that the allocations would be by quarter (3 months) or semester (6 months).
+If resources are undersubscribed, or a scientific need for longer-term allocations is identified, the RAC might consider granting long-term allocations.
+
+The technical implementation of how approved resources will be applied to users' RSP accounts remains to-be-determined.
+
+\textbf{At first}, it might be as simple as a toggle that allows a user account access to shared batch processing resources, or to select a larger server.
+
+\textbf{In the future}, resources might be more specifically allocated.
+For example, some processing is "pre-scheduled" (so as not to overburden resources).
+It might be that programs are assigned processing priority ("nice values") based on the RAC ranking or technical need
+(i.e., daily processing on the Prompt Products might require a higher priority). 
+
+
+
